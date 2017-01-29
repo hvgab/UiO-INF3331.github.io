@@ -13,4 +13,4 @@ with open(filename, 'r') as file:
         word_count += len(words)
         char_count += len(line)
 
-print("%d %d %d %s" % (line_count, word_count, char_count, filename))
+print("{} {} {} {}".format(line_count, word_count, char_count, filename))
