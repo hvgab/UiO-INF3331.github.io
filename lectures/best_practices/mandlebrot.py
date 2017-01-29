@@ -25,10 +25,6 @@ def mandelbrot(X, Y, max_iterations=1000, verbose=True):
 
     # Iterate of the y coordinates
     for i, y in enumerate(Y):
-
-        if verbose:
-            print('\rProcessing line {} of {}'.format(i+1, len(Y)), end='')
-
         for j, x in enumerate(X):
             n = 0
             c = x + 1j*y
@@ -38,6 +34,4 @@ def mandelbrot(X, Y, max_iterations=1000, verbose=True):
                 n += 1
             out_arr[i, j] = n
 
-    if verbose:
-        print('\r', end='')
     return out_arr
